@@ -51,17 +51,7 @@ or dive into some creative gameplay, this project is a great mix of coding and e
 	Savings
 
 # TO RUN THE GAME:
-Simply execute the script (`python script_name.py`). Pygame and Numpy must be installed in your environment.
-You can also use the .venv: (https://docs.python.org/3/library/venv.html)
-POSIX (macOS / Linux)
-	- bash/zsh: $ source <venv>/bin/activate
-	alternate shells:
-	- fish: $ source <venv>/bin/activate.fish
-	- csh/tcsh: $ source <venv>/bin/activate.csh
-	- pwsh: $ <venv>/bin/Activate.ps1
-Windows
-	- cmd.exe:	C:\> <venv>\Scripts\activate.bat
-	- PowerShell: PS C:\> <venv>\Scripts\Activate.ps1
+Simply execute the script (`python script_name.py`). Pygame and Numpy must be installed in your environment. You can also use a .venv: (https://docs.python.org/3/library/venv.html)
 
 Use the controls to guide the blocks and try to clear as many patterns as you can before the grid fills up!
 SUL SUL!
