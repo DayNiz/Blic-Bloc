@@ -2,20 +2,17 @@
 A remake of Blic-Bloc from The Sims 4!
 
 This program is a fan-game of the Blic-Bloc game of the Sims 4, implemented in Python using Pygame. 
-It features falling blocks, randomized tetromino shapes, and a playful interface. Whether you're looking to pass some time
-or dive into some creative gameplay, this project is a great mix of coding and entertainment.
 
 # MAIN FEATURES:
 - A grid-based game where blocks (tetrominos) fall, and players can move and place them strategically.
-- Randomized tetromino shapes with rotations and matching mechanics for an extra layer of challenge.
 - A UI displaying the upcoming blocks for better strategic planning.
 - Colorful gameplay with dynamic block handling and interaction.
 
 # HOW IT WORKS:
 1. The game starts with a 7x5 grid and a set of predefined tetromino shapes (L, Lr, T, Z, Zr, O, and I).
-2. Players control a single block that spawns at the top of the grid, moving it left, right, or down.
+2. Players control a single block that spawns at the top center of the grid, moving it left, right, or down.
 3. When the block can no longer move down, it "locks" into the grid, and the program checks for matching patterns.
-4. Matching patterns (completed tetrominos) are cleared from the grid, making space for new blocks.
+4. Matching patterns (completed tetrominos) are cleared from the grid, making space for new blocks, and may lead to cascade of tetrominos and falling blocks.
 5. The game ends when no more blocks can be placed at the top of the grid.
 
 # CLASSES AND METHODS:
@@ -55,4 +52,5 @@ Simply execute the script (`python script_name.py`). Pygame and Numpy must be in
 
 Use the controls to guide the blocks and try to clear as many patterns as you can before the grid fills up!
 SUL SUL!
-"""
+
+(sorry this doc was made with chatGPT - I was too bored to write all the doc by myself 🫥)
