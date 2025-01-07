@@ -13,7 +13,10 @@ class Game():
 		pygame.init()
 		self.screen = pygame.display.set_mode((800, 600))
 		self.clock = pygame.time.Clock()
+		self.default_font = pygame.font.Font(pygame.font.get_default_font(), 36)
 		self.running = True
+		self.score = 0
+		self.value_added = 64
 		self.grid = [[0, 0, 0, 0, 0],
 					 [0, 0, 0, 0, 0],
 					 [0, 0, 0, 0, 0],
@@ -114,7 +117,8 @@ class Game():
 
 			pygame.display.flip()
 			self.clock.tick(30) # Update at 30fps
-		#time.sleep(2)
+		
+		time.sleep(4)
 		pygame.quit()
 	
 	def draw_grid(self):
@@ -134,9 +138,12 @@ class Game():
 		"""
 		Draw various UI element on the screen
 		Currently only draw 2 next shape
+		Now can also show the score
 		"""
 		pygame.draw.rect(self.screen, self.cell_type[self.pl_next], [600, 200, self.pixel_size, self.pixel_size])
 		pygame.draw.rect(self.screen, self.cell_type[self.pl_next_next], [600, 296, self.pixel_size, self.pixel_size])
+		text_surface = self.default_font.render(str(self.score), True, (255, 255, 255))
+		self.screen.blit(text_surface, dest=(360,45))
 
 	def move_down(self) -> bool:
 		"""Move down the currently controlled shape
@@ -278,6 +285,8 @@ class Game():
 					nx, ny = x + i, y + j
 					# Clear block
 					self.grid[ny][nx] = 0
+		print(f"Adding {self.value_added} to the SCORE of {self.score}")
+		self.score += self.value_added
 
 	def falling_block(self):
 		for y in range(len(self.grid)-1):
@@ -292,9 +301,11 @@ class Game():
 
 	def game_over(self):
 		"""The game is Over!"""
+		text_surface = self.default_font.render("GAME OVER", True, (200, 120, 90))
+		self.screen.blit(text_surface, dest=(300,300))
 		self.running = False
 
 	
 if __name__ == "__main__":
 	blicBlock = Game()
-	blicBlock.run(2)
+	blicBlock.run(6)
