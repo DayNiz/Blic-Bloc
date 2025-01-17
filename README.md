@@ -8,6 +8,7 @@ This program is a fan-game of the Blic-Bloc game of the Sims 4, implemented in P
 - A grid-based game where blocks fall, and players place them strategically.
 - Assemble the block to create tetrominos.
 - The two next block color are shown for better strategic planning.
+- The more you play, the higher score you get on the menu.
 
 # HOW IT WORKS:
 1. The game starts with a 7x5 grid and a set of predefined tetromino shapes (L, Lr, T, Z, Zr, O, and I).
@@ -29,7 +30,7 @@ This program is a fan-game of the Blic-Bloc game of the Sims 4, implemented in P
 ---
 
 # TO RUN THE GAME:
-Simply execute the script (`python script_name.py`). Pygame, Pygame-menu and Numpy must be installed in your environment.
+Simply execute the script (`python main.py`). Pygame, Pygame-menu and Numpy must be installed in your environment, or in a .venv.
 
-Use the controls to guide the blocks and try to clear as many patterns as you can before the grid fills up!
+Use the arrows to guide the blocks and try to make as much points as you can before the grid fills up!
 SUL SUL!
